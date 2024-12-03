@@ -6,14 +6,16 @@ import { FaTimes } from 'react-icons/fa'
 import './Menu.scss'
 
 const Menu = ({ active, setActive }) => {
-
 	return (
 		<div
 			className={active ? 'menu active' : 'menu'}
 			onClick={() => setActive(false)}
 		>
 			<div className='menu-content' onClick={(e) => e.stopPropagation()}>
-      <FaTimes className='menu-content-close' onClick={() => setActive(false)} />
+				<FaTimes
+					className='menu-content-close'
+					onClick={() => setActive(false)}
+				/>
 				<nav className='menu-content-links'>
 					{[
 						{ path: '/', label: 'Главная' },
@@ -22,7 +24,12 @@ const Menu = ({ active, setActive }) => {
 						{ path: '/contacts', label: 'Контакты' },
 						{ path: '/about-us', label: 'О Компании' },
 					].map(({ path, label }) => (
-						<NavLink key={path} to={path} className='menu-content-links__link'>
+						<NavLink
+							key={path}
+							to={path}
+							className='menu-content-links__link'
+							onClick={() => setActive(false)}
+						>
 							{label}
 						</NavLink>
 					))}

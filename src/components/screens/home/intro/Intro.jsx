@@ -16,16 +16,16 @@ const Intro = () => {
 			<p className='intro-desc'>
 				{t('introDesc')}
 			</p>
-			<div className='intro-block flex items-center justify-around flex-wrap gap-x-2.5'>
-				<div className='intro-box'>
+			<div className='intro-block'>
+				<div className='intro-block__box'>
 					<i className='ic_trusted'></i>
 					<h4 className='intro-outline'>{t('serviceTitle')}</h4>
 				</div>
-				<div className='intro-box'>
+				<div className='intro-block__box'>
 					<i className='ic_estate'></i>
 					<h4 className='intro-outline'>{t('buySellTitle')}</h4>
 				</div>
-				<div className='intro-box'>
+				<div className='intro-block__box'>
 					<i className='ic_services'></i>
 					<h4 className='intro-outline'>{t('trustTitle')}</h4>
 				</div>
