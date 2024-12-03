@@ -1,0 +1,25 @@
+.btn {
+	width: clamp(160px, 20vw, 240px);
+  height: 50px;
+  text-align: center;
+  font-weight: 600;
+  font-size: clamp(14px, 3.5vw, 18px);
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  border-radius: 5px;
+  color: white;
+  background-color: rgba(37, 37, 37, 0.6);
+  transition: transform 0.1s ease, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.4);
+    background: white;
+    color: black;
+  }
+
+  &:active {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+}

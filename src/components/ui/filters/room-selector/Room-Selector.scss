@@ -1,0 +1,32 @@
+@import '@styles/index.scss';
+
+.filter-room {
+  width: 250px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+	&__title {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 20px;
+		color: $primary-color;
+		letter-spacing: .5px;
+	}
+	&__btn {
+		display: flex;
+    column-gap: 5px;
+		& button {
+      font-weight: 600;
+      padding: 4px 9px;
+			border-radius: 3px;
+			border: 2px solid $red;
+      background: $white;
+      color: $primary-color;
+      transition: .3s all;
+      &.active {
+        color: $white;
+        background: $red;
+      }
+		}
+	}
+}

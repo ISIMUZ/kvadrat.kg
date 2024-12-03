@@ -1,0 +1,81 @@
+@font-face {
+	font-family: 'icons';
+	src: url('fonts/icons.eot?2o5ktm');
+	src:
+		url('fonts/icons.eot?2o5ktm#iefix') format('embedded-opentype'),
+		url('fonts/icons.ttf?2o5ktm') format('truetype'),
+		url('fonts/icons.woff?2o5ktm') format('woff'),
+		url('fonts/icons.svg?2o5ktm#icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+i {
+	font-family: 'icons' !important;
+	speak-as: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.ic_conculturation:before {
+	content: '\e904';
+}
+.ic_sell:before {
+	content: '\e905';
+}
+.ic_accompaniment:before {
+	content: '\e906';
+}
+.ic_selection:before {
+	content: '\e907';
+}
+.ic_advertisement:before {
+	content: '\e908';
+}
+.ic_appraisal:before {
+	content: '\e909';
+}
+
+.ic_logo:before {
+	content: '\e900';
+	font-weight: 200;
+	font-size: clamp(50px, 5vw, 70px);
+	line-height: 100%;
+	color: #e90000;
+}
+
+.ic_estate:before {
+	content: '\e901';
+	font-size: clamp(35px, 5vw, 55px);
+}
+
+.ic_trusted:before {
+	content: '\e902';
+	font-size: clamp(35px, 5vw, 55px);
+}
+
+.ic_services:before {
+	content: '\e903';
+	font-size: clamp(35px, 5vw, 55px);
+}
+
+.ic_password:before {
+	content: '\e90a';
+}
+
+.ic_user:before {
+	content: '\e90b';
+}
+
+.ic_eye-close:before {
+	content: '\e90c';
+}
+
+.ic_eye:before {
+	content: '\e90d';
+}

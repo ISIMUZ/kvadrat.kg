@@ -1,0 +1,53 @@
+@import '@styles/index.scss';
+
+.intro {
+	padding: 120px 0 60px;
+	width: 100%;
+	border-radius: 20px;
+	background: $bg-color;
+	@media (max-width: 1080px) {
+		padding: 80px 10px 60px;
+	}
+	@media (max-width: 780px) {
+		padding: 60px 10px 40px;
+	}
+	@media (max-width: 580px) {
+		padding: 40px 10px 20px;
+	}
+	&-title {
+		text-align: center;
+		font-weight: 600;
+		font-size: clamp(22px, 3vw, 32px);
+		line-height: 40px;
+		margin-bottom: 10px;
+		color: $black;
+	}
+	&-desc {
+		max-width: 600px;
+		text-align: center;
+		font-weight: 500;
+		font-size: clamp(12px, 1.5vw, 16px);
+		line-height: 20px;
+		width: 100%;
+		margin: 0 auto;
+		margin-bottom: 40px;
+		color: $primary-color;
+	}
+	&-box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		max-width: 340px;
+		text-align: center;
+		& i {
+			color: $red;
+		}
+	}
+	&-outline {
+		font-weight: 500;
+		font-size: clamp(14px, 1.5vw, 18px);
+		line-height: 24px;
+		margin: 25px 0 15px;
+	}
+}

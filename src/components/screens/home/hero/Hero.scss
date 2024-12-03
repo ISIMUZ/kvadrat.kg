@@ -1,0 +1,102 @@
+@import '@styles/index.scss';
+
+.hero {
+	position: relative;
+	padding-top: 10px;
+	height: 100vh;
+	margin-bottom: 20px;
+	@media (max-width: 1080px) {
+		height: 80vh; 
+	}
+	@media (max-width: 580px) {
+		height: 60vh; 
+	}
+	@media (max-width: 480px) {
+		height: 50vh; 
+	}
+	.hero-wrapper {
+		overflow: hidden;
+		border-radius: 20px;
+		height: 97vh;
+		@media (max-width: 1080px) {
+			height: 77.5vh; 
+		}
+		@media (max-width: 580px) {
+			height: 58.2vh; 
+		}
+		@media (max-width: 480px) {
+			height: 48.5vh; 
+		}
+	}
+	.hero-slide {
+		overflow: hidden;
+		border-radius: 20px;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		top: 10px;
+		left: 0;
+		width: 100%;
+		height: 97%;
+		background: rgba(12, 12, 12, 0.5);
+		z-index: 1;
+		border-radius: 20px;
+	}
+	&-image {
+		width: 100%;
+		height: 97vh;
+		border-radius: 20px;
+		object-fit: cover;
+		@media (max-width: 1080px) {
+			height: 77.5vh; 
+		}
+		@media (max-width: 580px) {
+			height: 67.9vh; 
+			object-fit: cover;
+		}
+	}
+	&-content {
+		@media (max-width: 1080px) {
+			top: 200px;
+		}
+		@media (max-width: 780px) {
+			top: 180px;
+		}
+		@media (max-width: 580px) {
+			top: 150px;
+		}
+		@media (max-width: 480px) {
+			top: 130px;
+		}
+		position: absolute;
+		padding: 0 10px;
+		max-width: 1020px;
+		width: 100%;
+		top: 260px;
+		left: 50%;
+		transform: translate(-50%, 0);
+		z-index: 2;
+		&__title {
+			@media (max-width: 1180px) {
+				text-align: center;
+			}
+			font-weight: 700;
+			font-size: clamp(24px, 4vw, 40px);
+			line-height: 100%;
+			margin-bottom: 40px;
+			text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+			color: $white;
+		}
+		&__tab {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+			gap: 5px;
+			& span {
+				width: 240px;
+			}
+		}
+	}
+}
