@@ -132,7 +132,7 @@ const SellIntro = ({title, suptitle, reasons1, reasons2, reasons3, reasons4}) =>
 					<Btn
 						style={{ marginTop: '15px' }}
 						type='submit'
-						
+						onClick={handleCreateCard}
 					/>
 				</div>
 				<Modal isOpen={isModalOpen} onClose={closeModal} />
