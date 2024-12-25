@@ -8,8 +8,7 @@ import Menu from '../../../components/menu/Menu'
 import './Header.scss'
 
 const Header = ({ isAdmin }) => {
-
-  const [menuActive, setMenuActive] = useState(false)
+	const [menuActive, setMenuActive] = useState(false)
 	const [isActive, setActive] = useState(false)
 
 	useEffect(() => {
@@ -22,12 +21,7 @@ const Header = ({ isAdmin }) => {
 	}, [])
 
 	return (
-		<header
-			className={classNames(
-				'header',
-				{ header_active: isActive }
-			)}
-		>
+		<header className={classNames('header', { header_active: isActive })}>
 			<div className='wrapper'>
 				<div className='header-content'>
 					<Link to={'/'}>
@@ -55,7 +49,10 @@ const Header = ({ isAdmin }) => {
 							</NavLink>
 						))}
 					</nav>
-          <FaBars className='header-content-burger__btn' onClick={() => setMenuActive(!menuActive)} />
+					<FaBars
+						className='header-content-burger'
+						onClick={() => setMenuActive(!menuActive)}
+					/>
 					{isAdmin && (
 						<div className='header-profile'>
 							<NavLink to='/admin'>
@@ -66,7 +63,7 @@ const Header = ({ isAdmin }) => {
 					)}
 				</div>
 			</div>
-      <Menu active={menuActive} setActive={setMenuActive} />
+			<Menu active={menuActive} setActive={setMenuActive} />
 		</header>
 	)
 }

@@ -1,3 +1,5 @@
+@import '@styles/index.scss';
+
 @font-face {
 	font-family: 'icons';
 	src: url('fonts/icons.eot?2o5ktm');
@@ -46,7 +48,7 @@ i {
 	font-weight: 200;
 	font-size: clamp(50px, 5vw, 70px);
 	line-height: 100%;
-	color: #e90000;
+	color: $red;
 }
 
 .ic_estate:before {

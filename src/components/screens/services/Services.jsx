@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 
 import Counseling from '../../counseling/Counseling'
 
-import '@assets/icon/style.css'
+import '@assets/icon/style.scss'
 import './Services.scss'
 
 const Services = () => {

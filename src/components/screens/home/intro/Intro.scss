@@ -1,97 +1,130 @@
 @import '@styles/index.scss';
 
 .intro {
-  padding: 100px 0 60px;
-  width: 100%;
-  border-radius: 20px;
-  background: $red;
-  box-shadow: 0 0 2px $black;
-  
-  @media (max-width: 1080px) {
-    padding: 80px 10px 60px;
-  }
-  
-  @media (max-width: 780px) {
-    padding: 60px 10px 40px;
-  }
-  
-  @media (max-width: 580px) {
-    padding: 40px 10px 20px;
-  }
+	position: relative;
+	padding: 100px 0 60px;
+	width: 100%;
+	border-radius: 20px;
+	background: url('../../../../assets/images/img.jpg') no-repeat center/cover;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(12, 12, 12, 0.6);
+		z-index: 1;
+		border-radius: 20px;
+	}
 
-  &-title {
-    text-align: center;
-    font-weight: 600;
-    font-size: clamp(22px, 3vw, 32px);
-    line-height: 40px;
-    margin-bottom: 15px;
-    color: $white;
-		& span {
+	@media (max-width: 1080px) {
+		padding: 80px 10px 60px;
+	}
+
+	@media (max-width: 780px) {
+		padding: 60px 10px 40px;
+	}
+
+	@media (max-width: 580px) {
+		padding: 40px 10px 20px;
+	}
+	&-content {
+		&__title {
+			position: relative;
+			z-index: 2;
+			font-weight: 600;
+			font-size: clamp(22px, 3vw, 32px);
+			line-height: 40px;
+			margin-bottom: 15px;
+			text-align: center;
+			color: $white;
+			& span {
+				font-family: 'TT Masters', Arial, Helvetica, sans-serif;
+				font-weight: 700;
+				color: $red;
+			}
+		}
+		&__desc {
+			max-width: 600px;
+			font-weight: 500;
+			font-size: clamp(12px, 1.5vw, 16px);
+			line-height: 20px;
+			width: 100%;
+			margin: 0 auto;
+			text-align: center;
+			margin-bottom: 60px;
+			color: $white;
+			position: relative;
+			z-index: 2;
+		}
+
+		&-block {
+			position: relative;
+			display: grid;
+			grid-template-columns: repeat(3, 200px);
+			align-self: center;
+			justify-content: space-around;
+			column-gap: 20px;
+			z-index: 2;
+			@media (max-width: 1260px) {
+				display: grid;
+				grid-auto-flow: column;
+				justify-content: space-between;
+				overflow-x: auto;
+				scrollbar-width: none;
+				-ms-overflow-style: none;
+				&::-webkit-scrollbar {
+					display: none;
+				}
+			}
+			@media (max-width: 660px) {
+				grid-template-columns: repeat(3, 160px);
+			}
+			&__box {
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+				z-index: 2;
+				padding: 15px 5px 0;
+				&:before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background: rgba(225, 225, 225, 0.5);
+					z-index: -1;
+					border-radius: 40px;
+					filter: blur(5px);
+				}
+				& i {
+					color: $white;
+				}
+			}
+		}
+
+		&-outline {
+			font-weight: 500;
+			font-size: clamp(14px, 1.5vw, 18px);
+			line-height: 24px;
+			margin: 20px 0 15px;
 			color: $white;
 		}
-  }
+	}
 
-  &-desc {
-    max-width: 600px;
-    text-align: center;
-    font-weight: 500;
-    font-size: clamp(12px, 1.5vw, 16px);
-    line-height: 20px;
-    width: 100%;
-    margin: 0 auto;
-    margin-bottom: 40px;
-    color: white;
-  }
+	opacity: 0;
+	transform: translateY(50px);
+	transition:
+		opacity 1s,
+		transform 1s;
 
-  &-block {
-    @media (max-width: 1260px) {
-      display: grid;
-      grid-auto-flow: column;
-      overflow-x: auto;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-      &::-webkit-scrollbar {
-        display: none;
-      }
-    }
-    
-    @media (max-width: 660px) {
-      grid-template-columns: repeat(3, 160px);
-    }
-
-    display: grid;
-    grid-template-columns: repeat(3, 200px);
-    align-self: center;
-    justify-content: space-around;
-    gap: 10px;
-    
-    &__box {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      height: 100%;
-      text-align: center;
-      & i {
-        color: whitesmoke;
-      }
-    }
-  }
-
-  &-outline {
-    font-weight: 500;
-    font-size: clamp(14px, 1.5vw, 18px);
-    line-height: 24px;
-    margin: 20px 0 15px;
-		color: $white;
-  }
-
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s, transform 1s;
-
-  &.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+	&.visible {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
-

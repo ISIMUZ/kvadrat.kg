@@ -12,6 +12,7 @@
 		&-text {
 			color: $primary-color;
 			&__title {
+				font-family: 'TT Masters', Arial, Helvetica, sans-serif;
 				font-weight: 700;
 				font-size: 30px;
 				line-height: 40px;
@@ -26,6 +27,7 @@
 				color: $primary-color;
 				& span {
 					text-transform: uppercase;
+					font-family: 'TT Masters';
 					color: $red;
 				}
 			}

@@ -17,6 +17,8 @@
 			color: $black;
 			margin-bottom: 30px;
 			& span {
+				font-family: 'TT Masters', Arial, Helvetica, sans-serif;
+				font-weight: 900;
 				color: $red;
 			}
 		}
@@ -57,6 +59,7 @@
 	line-height: 20px;
 	color: $primary-color;
 	& span {
+		font-family: 'TT Masters', Arial, Helvetica, sans-serif;
 		color: $red;
 	}
 	& a {

@@ -1,9 +1,10 @@
 import React from 'react'
 
-import SellIntro from './sell-intro/Sell-intro'
+import IntroText from './intro-text/Intro-Text'
 
-import './Sell.scss'
 import Counseling from '../../counseling/Counseling'
+import Form from '../../form/Form'
+import './Sell.scss'
 
 const Sell = () => {
 	return (
@@ -11,7 +12,17 @@ const Sell = () => {
 			<div className='container'>
 				<div className='sell-content'>
 					<div className='wrapper'>
-						<SellIntro title='Как выгодно продать недвижимость?' suptitle='Мы поможем вам:' reasons1='Проконсультируем' reasons2='Оценим вашу недвижимость' reasons3='Заключаем эксклюзивный договор' reasons4='Размещаем рекламу' />
+						<div className='sell-content-form'>
+							<IntroText
+								title='Как выгодно продать недвижимость?'
+								suptitle='Мы поможем вам:'
+								reasons1='Проконсультируем'
+								reasons2='Оценим вашу недвижимость'
+								reasons3='Заключаем эксклюзивный договор'
+								reasons4='Размещаем рекламу'
+							/>
+							<Form />
+						</div>
 						<div className='sell-hero'>
 							<h2 className='sell-hero__title'>
 								Продавайте свою недвижимость вместе с <span>KVADRAT.KG</span>
@@ -96,7 +107,7 @@ const Sell = () => {
 							</div>
 						</div>
 					</div>
-					<Counseling/>
+					<Counseling />
 				</div>
 			</div>
 		</main>

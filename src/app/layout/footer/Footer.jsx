@@ -1,16 +1,16 @@
 import React from 'react'
 import { FaPhoneAlt, FaWhatsapp } from 'react-icons/fa'
-import { MdEmail, MdOutlineLaptopChromebook } from 'react-icons/md'
+import { MdEmail } from 'react-icons/md'
 import { IoLocationSharp } from 'react-icons/io5'
+import { NavLink } from 'react-router-dom'
 
 import AddressWithIcon from '@components/ui/аddress-wth-icon/address-with-icon'
 
-import './Footer.scss'
 
 const Footer = () => {
 	return (
 		<footer className='footer pt-[80px] pb-[80px] bg-[#2c2c2c]'>
-			<div className='wrapper grid grid-cols-3'>
+			<div className='wrapper flex items-start justify-between flex-wrap gap-10'>
 				<div className='footer-colums'>
 					<h2 className='footer-titles text-lg mb-5 font-medium text-[#eeeeee]'>
 						Наши контакты
@@ -48,14 +48,33 @@ const Footer = () => {
 							href={'mailto:kvadrat.ned@gmail.com'}
 							id={'email'}
 						/>
-						<AddressWithIcon
-							icon={MdOutlineLaptopChromebook}
-							text='Квадратный Метр'
-							href={'https://kvadrat.kg'}
-						/>
 					</div>
 				</div>
-				<div className='footer-colums'></div>
+				<div className='footer-colums'>
+					<h2 className='footer-titles text-lg mb-5 font-medium text-[#eeeeee]'>
+						Категории
+					</h2>
+					<div className='footer-box flex flex-col gap-y-[12px]'>
+						<NavLink
+							to='/buy-property'
+							className='text-xs leading-5 text-address-color font-medium'
+						>
+							Купить Недвижимость
+						</NavLink>
+						<NavLink
+							to='/services'
+							className='text-xs leading-5 text-address-color font-medium'
+						>
+							Услуги
+						</NavLink>
+						<NavLink
+							to='/about-us'
+							className='text-xs leading-5 text-address-color font-medium'
+						>
+							О Компании
+						</NavLink>
+					</div>
+				</div>
 				<div className='footer-colums'></div>
 			</div>
 		</footer>

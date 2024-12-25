@@ -10,7 +10,7 @@ import DirectionSelector from './direction-selector/Direction-Selector'
 import PropertyTypeSelector from './property-type-selector/Property-Type-Selector'
 import AreaInput from './area-input/Area-Input'
 
-import '@assets/icon/style.css'
+import '@assets/icon/style.scss'
 import './Filters.scss'
 
 const Filter = () => {
